@@ -1,44 +1,44 @@
-import Button from "../components/Button/Button"
+// import Button from "../components/Button"
+import { MyFirstComponent as Button} from '@hg77080/newcomponent.my-first-component';
+const variants = ['primary', 'secondary'];
+const sizeVariants = ['sm', 'md','lg'];
 
 export default {
   title: "Components/Button",
   component: Button,
-  argTypes: { handleClick: { action: "handleClick" } },
+  argTypes: {
+    variant: { control: "select", options: variants },
+    size: { control: "radio", options: sizeVariants },
+
+  },
 }
 
 const Template = args => <Button {...args} />
 
-export const Red = Template.bind({})
-Red.args = {
-  backgroundColor: "red",
-  label: "Press Me",
+export const Primary = Template.bind({})
+Primary.args = {
+  variant: "primary",
+  buttonText: "Submit",
   size: "md",
 }
 
-export const Green = Template.bind({})
-Green.args = {
-  backgroundColor: "green",
-  label: "Press Me",
+export const Secondary = Template.bind({})
+Secondary.args = {
+  variant: 'secondary',
+  buttonText: "Submit",
   size: "md",
 }
 
 export const Small = Template.bind({})
 Small.args = {
-  backgroundColor: "red",
-  label: "Press Me",
-  size: "sm",
+    variant: "primary",
+    buttonText: "Submit",
+    size: "sm",
 }
 
 export const Large = Template.bind({})
 Large.args = {
-  backgroundColor: "red",
-  label: "Press Me",
-  size: "lg",
-}
-
-export const LongLabel = Template.bind({})
-LongLabel.args = {
-  backgroundColor: "red",
-  label: "Press Me adsf asdf asdf asdfasdfasd fasd fasd fasd",
-  size: "md",
+    variant: "primary",
+    buttonText: "Submit",
+    size: "lg",
 }

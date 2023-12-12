@@ -1,12 +1,12 @@
 import './App.css';
-import Button  from './components/Button/Button';
+import { MyFirstComponent as Button} from '@hg77080/newcomponent.my-first-component';
 
 function App() {
   return (
     <div className="App">
-     <Button/>
+      <Button variant='primary' size='md' buttonText='Submit'/>
     </div>
   );
 }
-
+ 
 export default App;
