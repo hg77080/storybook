@@ -1,5 +1,5 @@
-import Stack from "../components/Stack/Stack"
-
+// import Stack from "../components/Stack/Stack"
+import {Stack} from "@hg77080/stackcomponent.stack"
 export default {
   title: "Components/Stack",
   component: Stack,
@@ -30,6 +30,7 @@ const Template = ({ numberOfChildren, ...args }) => (
 export const Horizontal = Template.bind({})
 Horizontal.args = {
   direction: "row",
+  numberOfChildren: 1,
   spacing: 2,
   wrap: false,
 }
@@ -37,6 +38,7 @@ Horizontal.args = {
 export const Vertical = Template.bind({})
 Vertical.args = {
   direction: "column",
+  numberOfChildren: 1,
   spacing: 2,
   wrap: false,
 }
@@ -44,6 +46,7 @@ Vertical.args = {
 export const NoSpacing = Template.bind({})
 NoSpacing.args = {
   direction: "row",
+  numberOfChildren: 1,
   spacing: 0,
   wrap: false,
 }

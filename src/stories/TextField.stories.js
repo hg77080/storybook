@@ -1,13 +1,13 @@
-import TextField from "../components/TextField/TextField"
+import { Input } from "@hg77080/inputcomponent.input"
 
 export default {
-  title: "Components/TextField",
-  component: TextField,
+  title: "Components/Input",
+  component: Input,
 }
 
-const Template = args => <TextField {...args} />
+const Template = args => <Input {...args} />
 
 export const Basic = Template.bind({})
-Basic.args = { label: "Name",isDisabled:false,isRequired:false };
+Basic.args = { label: "Name",isDisabled:false,isRequired:false,error:'' };
 export const Disabled = Template.bind({})
-Disabled.args = { label: "Name",isDisabled:true,isRequired:false };
+Disabled.args = { label: "Name",isDisabled:true,isRequired:false,error:'' };
